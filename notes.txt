@@ -1,2 +1,4 @@
 This is a placeholder draft file.Practicing Git commit message correction
 This commit will be recovered using reflog
+
+Small notes about the document empty list output behavior.
