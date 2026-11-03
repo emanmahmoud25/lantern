@@ -23,7 +23,9 @@ if __name__ == "__main__":
     if args.command == "add":
         task = add_task(args.title)
         print(f"Task added: {task['title']}")
-
     elif args.command == "list":
-        tasks = list_tasks()
-        print(tasks)
+            tasks = list_tasks()
+            if not tasks:
+                print("No tasks found.")
+            else:
+                print(tasks)
