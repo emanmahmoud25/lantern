@@ -1,5 +1,7 @@
 import argparse
 from tasks import add_task, list_tasks
+from storage import load
+from export import export_csv
 
 # Create the main parser
 parser = argparse.ArgumentParser(
@@ -15,6 +17,8 @@ add_parser.add_argument("title")
 
 # List command
 list_parser = sub.add_parser("list")
+export_parser = sub.add_parser("export")
+export_parser.add_argument("--csv", action="store_true")
 
 
 if __name__ == "__main__":
@@ -27,3 +31,7 @@ if __name__ == "__main__":
     elif args.command == "list":
         tasks = list_tasks()
         print(tasks)
+    elif args.command == "export":
+        if args.csv:
+            tasks = load()
+            print(export_csv(tasks), end="")
