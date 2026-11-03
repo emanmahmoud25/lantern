@@ -15,6 +15,11 @@ add_parser.add_argument("title")
 
 # List command
 list_parser = sub.add_parser("list")
+list_parser.add_argument(
+    "--done",
+    action="store_true",
+    help="Show only completed tasks"
+)
 
 
 if __name__ == "__main__":
