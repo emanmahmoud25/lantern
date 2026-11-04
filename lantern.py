@@ -1,4 +1,3 @@
-
 import argparse
 from tasks import add_task, list_tasks
 from export import export_csv
@@ -17,11 +16,13 @@ add_parser.add_argument("title")
 
 # List command
 list_parser = sub.add_parser("list")
+
 list_parser.add_argument(
     "--sort",
     action="store_true",
     help="Sort tasks by title"
 )
+
 list_parser.add_argument(
     "--done",
     action="store_true",
@@ -45,6 +46,12 @@ if __name__ == "__main__":
 
     elif args.command == "list":
         tasks = list_tasks()
+
+        if args.done:
+            tasks = [
+                task for task in tasks
+                if task.get("done") is True
+            ]
 
         if not tasks:
             print("No tasks found.")
