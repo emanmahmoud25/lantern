@@ -1,5 +1,7 @@
+
 import argparse
 from tasks import add_task, list_tasks
+from export import export_csv
 
 # Create the main parser
 parser = argparse.ArgumentParser(
@@ -15,12 +17,23 @@ add_parser.add_argument("title")
 
 # List command
 list_parser = sub.add_parser("list")
-# add argument sort
-list_parser.add_argument("--sort", action="store_true", help="sort tasks by title")
+list_parser.add_argument(
+    "--sort",
+    action="store_true",
+    help="Sort tasks by title"
+)
 list_parser.add_argument(
     "--done",
     action="store_true",
     help="Show only completed tasks"
+)
+
+# Export command
+export_parser = sub.add_parser("export")
+export_parser.add_argument(
+    "--csv",
+    action="store_true",
+    help="Export tasks to CSV"
 )
 
 if __name__ == "__main__":
@@ -29,14 +42,23 @@ if __name__ == "__main__":
     if args.command == "add":
         task = add_task(args.title)
         print(f"Task added: {task['title']}")
+
     elif args.command == "list":
         tasks = list_tasks()
+
         if not tasks:
             print("No tasks found.")
         else:
-            # check if the --sort is passed in args
             if args.sort:
-                # sort the tasks by sorted algo
-                tasks = sorted(tasks, key=lambda x: x.get("title", ""))
+                tasks = sorted(
+                    tasks,
+                    key=lambda x: x.get("title", "")
+                )
+
             for task in tasks:
                 print(task)
+
+    elif args.command == "export":
+        if args.csv:
+            tasks = list_tasks()
+            export_csv(tasks)
