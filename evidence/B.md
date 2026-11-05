@@ -53,7 +53,7 @@
 
 <img width="1147" height="312" alt="Image" src="https://github.com/user-attachments/assets/102e4e11-0264-4160-b628-6ccb4e6260fd" />
 
-**Description:** `git log --graph --oneline --all --decorate` after the Requirement 3 merges. `fix(storage): sort task keys alphabetically` (`6b865ed`) and `feat(storage): add pretty printing to json dump` (`d35c840`) diverge from the merge commit `9d0de04` and are joined by the merge commit `a4f1e44` (`refactor(storage): standardize task JSON formatting`). The history below `9d0de04` continues in a straight line. `HEAD -> main, origin/main, origin/HEAD` points to `8b7b236` (`fix(git): remove tracked files matching gitignore`). The lower part of the output repeats after the pager's `...skipping...` line.
+**Description:** `git log --graph --oneline --all --decorate` after the Requirement 3 merges. `fix(storage): sort task keys alphabetically` (`6b865ed`) and `feat(storage): add pretty printing to json dump` (`d35c840`) diverge from the merge commit `9d0de04` and are joined by the merge commit `a4f1e44` (`refactor(storage): standardize task JSON formatting`).
 
 ---
 
