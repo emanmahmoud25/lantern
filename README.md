@@ -1,37 +1,44 @@
 # Lantern Task Tracker
 
-Lantern is a simple command-line task tracker built with Python. It allows users to add tasks, display tasks, filter completed tasks, sort tasks by title, and export tasks to CSV.
+Lantern is a simple command-line task tracker written in Python. It lets you add tasks, list them (all, only completed, or sorted by title), and export them to a CSV file.
 
-## Installation
+## Installation and Usage
 
-Clone the repository:
+Requirements: Python 3.
+
+Clone the repository and run Lantern from its folder:
 
 ```bash
 git clone https://github.com/emanmahmoud25/lantern.git
 cd lantern
 ```
 
-## Usage
-
-Run the application using Python:
+Examples:
 
 ```bash
 python lantern.py --help
+python lantern.py add "Buy milk"
+python lantern.py list
+python lantern.py list --done
+python lantern.py list --sort
+python lantern.py export --csv
 ```
-
-To see the available commands and options.
 
 ## Commands
 
-- `add "Task title"`: Add a new task.
-- `list`: Display all tasks.
-- `list --done`: Display completed tasks only.
-- `list --sort`: Sort tasks by title.
-- `export --csv`: Export tasks to a CSV file.
+- `add <title>`: Add a new task.
+- `list`: Show all tasks.
+- `list --done`: Show only completed tasks.
+- `list --sort`: Show tasks sorted by title.
+- `export --csv`: Export the tasks to `tasks.csv`.
 
 ## Documentation
 
-For more details, see the [Usage Guide](docs/usage.md).
+See the [Usage Guide](docs/usage.md) for more details.
+
+## Contributing
+
+Contributions are welcome. Please read the [Contributing Guidelines](CONTRIBUTING.md) first.
 
 ## Team
 
@@ -39,5 +46,3 @@ For more details, see the [Usage Guide](docs/usage.md).
 | ------------------ | --------- | --------------- |
 | Eman Mahmoud Ahmed | Student A | emanmahmoud25   |
 | Mohamed Hesham     | Student B | Mohamed-hesham-21 |
-
-[Contributing Guidelines](CONTRIBUTING.md)
