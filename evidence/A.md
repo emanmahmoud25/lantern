@@ -16,13 +16,13 @@
 
 ### E2.1 – `git status` with `notes.txt` in both sections
 
-<img width="790" height="516" alt="Image" src="https://github.com/user-attachments/assets/0d68a8af-33ce-4305-839c-251857f43052" />
+<img width="801" height="367" alt="Image" src="https://github.com/user-attachments/assets/93778da5-64e4-42c6-8160-c0dac1f079ee" />
 
 **Description:** `git status` on branch `main`, up to date with `origin/main`. The file `notes.txt` is listed twice: under *Changes to be committed* (green, the staged change) and under *Changes not staged for commit* (red, a second edit made after staging). This shows the staging area holding a different version of the file than the working directory.
 
 ### E2.2 – `git diff --cached` and `git diff` for `notes.txt`
 
-<img width="801" height="367" alt="Image" src="https://github.com/user-attachments/assets/93778da5-64e4-42c6-8160-c0dac1f079ee" />
+<img width="790" height="516" alt="Image" src="https://github.com/user-attachments/assets/0d68a8af-33ce-4305-839c-251857f43052" />
 
 **Description:** Two diffs of the same file with different content.
 
